@@ -36,7 +36,7 @@ class Partition:
 
             new_repr += (labels[pair],)
 
-        return Partition(self.size, new_repr, next_free_label - 1)
+        return Partition(self.size, new_repr, next_free_label)
 
     @lru_cache
     def __mul__(self, y):
@@ -76,7 +76,7 @@ class Partition:
 
             new_partition += (new_labels[label],)
 
-        return Partition(size, new_partition, next_free_label - 1)
+        return Partition(size, new_partition, next_free_label)
 
 
 @lru_cache
